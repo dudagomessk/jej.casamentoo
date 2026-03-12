@@ -1,197 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
-  --main-bg-color: brown;
-  font-size: clamp(0.9375rem, 0.9119rem + 0.1136vw, 1rem);
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-a{
-    text-decoration: none; /* remove o sublinhado dos links */
-    color: black; /* altera a cor de todos os links das páginas */
+
+  --main-bg-color: rgb(255, 255, 255);
+  font-size: clamp(1.3rem, calc(0.9119rem + 0.1136vw), 1.8rem);
+  font-family: 'Crimson Text', serif;
 }
 
-/* === GERAL === */
-html {
-    font-size: calc(12px + 0.390625vw);
+body {
+  --font-size-min : 18 ; 
+  --font-size-max : 21 ; 
+  --font-view-min : 576 ; 
+  --font-view-max : 1280 ; 
+
+  font-size : clamp ( calc ( var (--font-size-min) * 1px ), calc (( var (--font-size-min) * 1px ) + ( var (--font-size-max) - var (--font-size-min)) * (( 100vw - ( var (--font-view-min) * 1px )) / var (--font-view-max))), calc ( var (--font-size-max) * 1px )); 
+  line-height : 1.6em ; 
+  background: white;
 }
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+main {
+  font-size: clamp(1.3rem, calc(0.9119rem + 0.1136vw), 1.8rem);
 }
+
 a{
     text-decoration: none;
-}
-h2{
-    font-size: 2.2rem;
-    font-weight: bold;
     color: black;
 }
-button{
-    border-radius: 20px;
-    padding: 10px 20px 10px 20px;
-    margin: 2.5vw 0 0 0;
-    font-size: 1.1rem;
+
+h1, h2{
+  font-family: 'Julius Sans One', sans-serif;
 }
-/* === TOPO === */
-header div.topo{
-  padding: 1.2vw;
-    background-color: #696969;
+
+h3, h4, h5, h6 {
+  font-family: 'Crimson Text', serif;
 }
-header div.topo nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+/*Header*/
+
+
+header {
+  background-color: #696865;
+  padding: 1rem 0;
 }
-header  div.topo nav div{
-color: #FFFDFD;
-display: flex;
-gap: 2vw;
-align-items: center;
-}
-header div.topo nav h1 a{
-  color: #FFFDFD;
-  font-size: 2vw;
-}
-header  div.topo nav p {
-  font-size: 0.8vw;
-}
-header div.topo nav {
-  align-items: center;
+
+header div.tudo nav{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 0 5vw;
 }
-header div.topo nav ul{
-    display: flex;
+
+header div.tudo nav ul {
+  display: flex;
+  gap: 3vw;
+  align-items: center;
+  padding: 0;
 }
-header div.topo nav ul li{
-    margin: 0 0 0 3vw;
+
+header div.tudo nav div.logo {
+  display: flex;
+  gap: 3vw;
+  align-items: baseline;
 }
-header div.topo nav ul li a{
-    color: #FFFDFD;
-    font-weight: lighter;
-    border-bottom: 2px solid;
+
+header div.tudo nav div.logo h1 {
+  font-size: clamp(2.25rem, calc(1.4773rem + 0.1136vw), 2.5rem);
+}
+
+header div.tudo nav div.logo h1 a {
+  color: white;
+}
+
+header div.tudo nav div.logo p {
+  font-size: clamp(0.75rem, calc(0.7273rem + 0.1136vw), 0.875rem);
+  color: white;
+}
+
+header div.tudo nav ul {
+  display: flex;
+  gap: 3vw;
+  align-items: center;
+}
+
+header div.tudo nav ul li a {
+  color: white;
+  border-bottom: 1.85px solid white;
+  font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
 }
 
 
-/* === BANNER === */
-section.banner{
-    display: flex;
-    margin: 0 10vw;
-}
-section.banner div.imagem{
-    margin: 0 2vw 0 0;
-}
-section.banner h2{
+/*Main*/
 
-    margin: 8vw 0 2.5vw 0vw;
-}
-section.banner h2 span{
-    color: #458FF6;
-}
-section.banner p{
-    color: #a2a1a4;
-    margin: 0 15vw 0 0;
-}
-section.banner p button{
-    background: #458FF6;
-    color: white;
-    border-radius: 20px;
-    padding: 10px 20px 10px 20px;
-    border: none;
-    margin: 2.5vw 0 0 0;
-    font-size: 1.1rem;
+
+section.banner h2 {
+  font-size: clamp(2.5rem, 8vw, 7.5rem); 
+  margin: 1rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15vh 5vw;
 }
 
-/* === CUIDADOS === */
-section.cuidados{
-    margin: 5vw 10vw 5vw 10vw;
-    text-align: center;
-}
-section.cuidados h2{
-    border-bottom: 1px solid black;
-    padding: 0 0 1vw 0;
-    display: inline-block;
-}
-section.cuidados > p{
-    margin: 3vw 15% 3vw 15%;
-}
-section.cuidados p button{
-    color: #458FF6;
-    border: 1px solid #458FF6;
-    background: transparent;
-
-}
-section.cuidados ul{
-    display: flex;
-    text-align: left;
-}
-section.cuidados ul li{
-    border: 2px solid gainsboro;
-    padding: 25px;
-    border-radius: 20px;
-    margin: 0 3vw 0 0;
-}
-section.cuidados ul li:last-child{
-    margin: 0;
-}
-section.cuidados ul li h3{
-    margin: 1vw 0 1vw 0;
-    font-weight: bold;
-}
-section.cuidados ul li p{
-    font-size: 0.8rem;
-    color: rgb(175, 175, 175);
-    line-height: 1.1rem;
+section.introducao div.paragrafo {
+  width: 100%;
+  height: 50vw !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  position: relative; 
+  overflow: hidden; 
 }
 
-/* === DEPOIMENTOS === */
-section.depoimentos{
-    text-align: center;
-    background-color: #5A98F2;
-    margin: 0 10vw 0 10vw;
-    border-radius: 20px;
-    padding: 60px;
-}
-section.depoimentos h2{
-    border-bottom: 1px solid white;
-    padding: 0 0 1vw 0;
-    display: inline-block;
-    color: white;
-}
-section.depoimentos div{
-    display: flex;
-    justify-content: center;
-    margin: 3vw 0 0 0;
-}
-section.depoimentos div p{
-    text-align: left;
-    width: 35%;
-    margin: 0 0 0 4vw;
-    color: white;
+section.introducao div.paragrafo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vw;
+  
+  background-image: url(../src/images/flowers.png);
+  background-size: cover;
+  background-position: center;
+  
+  filter: blur(1.5px); 
+
+  transform: scale(1.1); 
+  z-index: 1; 
 }
 
-/* === RODAPE === */
+section.introducao div.paragrafo > * {
+  position: relative;
+  z-index: 2;
+}
+
+section.introducao div.paragrafo p {
+  color: white;
+  padding: 1.5vw;
+  width: 90%; 
+  max-width: 600px;
+  text-align: center;
+}
+
+
+section.paginas div.pags nav ul {
+  margin: 3vw 5vw;
+  display: flex;
+  gap: 3vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 5vw;
+}
+
+section.paginas div.pags nav ul li h3.pri {
+  background-image: linear-gradient(rgba(105, 65, 80, 0.2)), url(../src/images/our-history.png);
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: center;
+  width: 100%; 
+  min-width: 480px;
+  max-width: 700px;
+  aspect-ratio: 5 / 6;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+section.paginas div.pags nav ul li h3.pri a{
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+section.paginas div.pags nav ul li h3.seg {
+  background-image: linear-gradient(rgba(105, 65, 80, 0.2)), url(../src/images/the-details.png);
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: center;
+  width: 100%; 
+  min-width: 480px;
+  max-width: 700px;
+  aspect-ratio: 5 / 6;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+section.paginas div.pags nav ul li h3.seg a{
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+section.paginas div.pags nav ul li h3.ter {
+  background-image: linear-gradient(rgba(105, 65, 80, 0.2)), url(../src/images/rsvp.png);
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: center;
+  width: 100%; 
+  min-width: 480px;
+  max-width: 700px;
+  aspect-ratio: 5 / 6;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+section.paginas div.pags nav ul li h3.ter a{
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+section.paginas div.pags nav ul li h3.qua {
+  background-image: linear-gradient(rgba(105, 65, 80, 0.2)), url(../src/images/registry.png);
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: center;
+  width: 100%; 
+  min-width: 480px;
+  max-width: 700px;
+  aspect-ratio: 5 / 6;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+section.paginas div.pags nav ul li h3.qua a{
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+section.paginas div.pags nav ul li:hover {
+  transform: scale(1.02);
+}
+
+section.registro div.texto{
+  width: 100%;
+  height: 50vw !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  position: relative; 
+  overflow: hidden; 
+}
+
+section.registro div.texto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vw;
+  
+  background-image: linear-gradient(#6941503f, #69415015), url(../src/images/registry-green.png);
+  background-size: cover;
+  background-position: center;
+  
+  filter: blur(1.5px); 
+
+  transform: scale(1.1); 
+  z-index: 1; 
+}
+
+section.registro div.texto > * {
+  position: relative;
+  z-index: 2;
+}
+
+section.registro div.texto h3 {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-weight: 550;
+}
+
+section.registro div.texto p {
+  color: white;
+  padding: 1.5vw;
+  width: 90%; 
+  max-width: 700px;
+  text-align: center;
+}
+
+section.registro div.texto button {
+  background-color: #7D7662;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  padding: 1vw 12vw;
+  font-size: clamp(0.8rem, calc(0.7273rem + 0.1136vw), 1.2rem);
+  cursor: pointer;
+  border-radius: 100vw;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+section.registro div.texto button:hover {
+  transform: scale(1.02);
+}
+
+section.dress {
+/*padding:3rem 5rem 3rem vh;*/
+text-align: center;
+}
+section.dress  h3{
+  padding: 2rem;
+  align-items: center;
+  font-size: 3.8rem;
+  font-weight: lighter;
+}
+section.dress  P{
+  padding: 0vh;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+section.dress  {
+  background-color: #FCFAFD;
+}
+
+/*FOOTER*/
+
 footer{
-    background-color: #5A98F2;
-    color: white;
-    margin: 5vw 0 0 0;
-    padding: 60px 10vw 60px 10vw;
+    background-color: #E1DBCB;
+    padding: 3vh 1vw;
+}
+footer h2 {
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+  font-weight: 550;
+  font-weight: bolder;
+  font-size: 2.8rem;
+  padding: 5vh 9vh;
+}
+footer p{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+
+/*MEDIA*/
+
+@media (max-width: 600px) {
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  div.pags nav ul li {
+    width: 100%;
+  }
+
+  section.introducao div.paragrafo p{
+    max-width: 340px;
+  }
+
+  section.banner {
+    position: relative;
+    height: 60vw;
+    width: 100%;
+    overflow: hidden; /* Esconde as bordas borradas do efeito blur */
     display: flex;
-    justify-content: space-between;
-}
-footer div p:first-child{
-    margin: 0 0 3vw 0;
-}
-footer div h4{
-    font-weight: bold;
-    margin: 0 0 1vw 0;
-}
-footer div ul li{
-    margin: 5px 0 5px 0;
-}
-footer a{
+    align-items: center;
+    justify-content: center;
+  }
+
+  section.banner::before {
+    content: ""; /*Pra mostrar o que tem no before (ou after)*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vw;
+
+    background-image: linear-gradient(#41626959, #41626959), url(../src/images/1img.png);
+    background-size: cover;
+    background-position: center;
+    
+
+    filter: blur(1px); 
+    
+    transform: scale(1.1); /* Aumenta o tamanho pro blur não ficar com borda branca */
+    z-index: 1;
+  }
+
+  section.banner h2 {
+    position: relative;
+    z-index: 2; /* Para que o texto fique em cima do fundo */
     color: white;
-    font-size: 0.8rem;
+    margin: 0;
+    text-align: center;
+    width: 90%;
+    line-height: 1.2;
+    font-size: clamp(2.5rem, 12vw, 4rem);
+    padding: 0;
+  }
+  
+  section.introducao div.paragrafo::before {
+    display: none;
+  }
+
+  section.introducao div.paragrafo {
+    height: auto !important;
+    padding: 2rem 0;
+  }
+
+  section.introducao div.paragrafo p {
+    color: black;
+    font-weight: 600;
+  }
+
+  section.paginas div.pags nav ul li h3.pri {
+  min-width: 280px;
+  max-width: 500px;
 }
 
+section.paginas div.pags nav ul li h3.seg { 
+  min-width: 280px;
+  max-width: 500px;
+}
 
+section.paginas div.pags nav ul li h3.ter {
+  min-width: 280px;
+  max-width: 500px;
+}
+
+section.paginas div.pags nav ul li h3.qua { 
+  min-width: 280px;
+  max-width: 500px;
+}
+
+section.registro div.texto{
+  height: 95vw !important;
+
+}
+
+section.regitro div.texto p {
+  max-width: 340px;
+}
+
+section.registro div.texto::before {
+  height: 95vw;
+}
+
+section.registro div.texto button {
+  padding: 0.5vw 15vw;
+}
+
+section.dress div.code {
+  min-width: 280px;
+  max-width: 400px;
+  height: 95vw;
+}
+
+}
