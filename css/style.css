@@ -115,11 +115,12 @@ section.introducao div.paragrafo {
   justify-content: center;
   
   position: relative; 
-  overflow: hidden; 
+  overflow: hidden;
+  background-image: url(../src/images/flowers.png); 
 }
 
 section.introducao div.paragrafo::before {
-  content: "";
+  /*content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -133,7 +134,7 @@ section.introducao div.paragrafo::before {
   filter: blur(1.5px); 
 
   transform: scale(1.1); 
-  z-index: 1; 
+  z-index: 1; */
 }
 
 section.introducao div.paragrafo > * {
@@ -373,6 +374,51 @@ footer p{
 
 @media (max-width: 600px) {
 
+
+  /*HEADER PHONE*/
+
+  header div.tudo nav div.logo h1 {
+    font-size: clamp(1.2rem, calc(0.7273rem + 0.1136vw), 1rem);
+  }
+
+  div.tudo nav label.menu-hamburguer {
+    display: flex;
+  }
+
+  div.tudo nav ul.menu{
+    background: #E1DBCB;
+    display: none;
+    padding: 20px 20px 35px 20px;
+    top: 55px;
+    right: 0;
+    align-items: end;
+    flex-direction: column;
+    width: 50%;
+    position: absolute;
+    z-index: 5;
+  }
+  
+  div.tudo nav label.menu-hamburguer span{
+  width: 28px;
+  height: 3px;
+  background: white;
+  margin: 4px;
+  display: block;
+  }
+
+  div.tudo nav ul.menu li{
+    margin: 10px 0;
+  }
+
+  div.tudo nav ul.menu li a {
+    color: black;
+    border-bottom: 1.85px solid black;
+  }
+
+  div.tudo nav input#menu-check:checked ~ ul.menu{
+    display: flex;
+    z-index: 10;
+  }
   p {
     font-size: 1.2rem;
   }
@@ -406,10 +452,12 @@ footer p{
     line-height: 1.2;
     font-size: clamp(2.5rem, 12vw, 4rem);
     padding: 0;
+    font-weight: bolder;
   }
   
   section.introducao div.paragrafo::before {
     display: none;
+    
   }
 
   section.introducao div.paragrafo {
@@ -418,7 +466,6 @@ footer p{
   }
 
   section.introducao div.paragrafo p {
-    color: black;
     font-weight: 600;
   }
 
